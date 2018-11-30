@@ -1,0 +1,20 @@
+INFO:unityagents:
+'Academy' started successfully!
+Unity Academy name: Academy
+        Number of Brains: 1
+        Number of External Brains : 1
+        Lesson number : 0
+        Reset Parameters :
+		goal_speed -> 1.0
+		goal_size -> 5.0
+Unity brain name: ReacherBrain
+        Number of Visual Observations (per agent): 0
+        Vector Observation space type: continuous
+        Vector Observation space size (per agent): 33
+        Number of stacked Vector Observation: 1
+        Vector Action space type: continuous
+        Vector Action space size (per agent): 4
+        Vector Action descriptions: , , , 
+INFO:gym_unity:20 agents within environment.
+INFO:root:Configuration: {'general_params': {'seed': 0, 'num_of_episodes': 300, 'mode': {'train': 1, 'test': 0}}, 'agent_params': {'state_size': 33, 'action_size': 4, 'learning_rate_actor': 0.001, 'learning_rate_policy': 0.0003, 'learning_rate_critic': 0.002, 'learning_rate_value_fn': 0.0003, 'gamma': 0.99, 'tau': 0.001, 'updates_num': 10, 'baseline_epochs': 10, 'ppo_epochs': 5, 'ppo_epsilon': 0.2, 'buf_params': {'buffer_size': 1000, 'batch_size': 128}, 'nn_params': {'nn_actor': {'l1': [-1, 128], 'l2': [128, 64], 'l3': [64, -1]}, 'nn_critic': {'l1': [-1, 128], 'l2': [128, 256], 'l3': [256, 128], 'l4': [128, 32], 'l5': [32, 1]}, 'nn_policy': {'l1': [33, 128], 'l2': [128, 64], 'l3': [64, 4]}, 'nn_value_function': {'l1': [33, 256], 'l2': [256, 128], 'l3': [128, 1]}}}, 'trainer_params': {'learning_rate_decay': 0.999, 't_max': 1000, 'results_path': '../results/', 'model_path': '../models/'}, 'env_params': {'path': '../Reacher_Linux_20/Reacher.x86_64', 'seed': 0, 'worker_id': 0, 'visual_mode': False, 'multiagent_mode': True}}
+INFO:root:Training:
