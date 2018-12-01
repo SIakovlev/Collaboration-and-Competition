@@ -100,8 +100,8 @@ class Trainer:
                   format(episode_i, np.max(scores), np.mean(reward_window),
                          total_loss, self.agents.learning_rate_actor, self.agents.learning_rate_critic), end="")
 
-            logging.info('Episode {}\tCurrent Score (average over 20 robots): {:.4f}\tAverage Score (over episodes): {:.4f} '
-                         '\t\tTotal loss: {:.2f}\tLearning rate (actor): {:.4f}\tLearning rate (critic): {:.4f}'.
+            logging.info('Episode {}\tCurrent Score: {:.4f}\tAverage Score (over episodes): {:.4f} '
+                         '\t\tTotal loss: {:.2f}\tLearning rate (actors): {:.4f}\tLearning rate (critic): {:.4f}'.
                          format(episode_i, np.max(scores), np.mean(reward_window),
                                 total_loss, self.agents.learning_rate_actor, self.agents.learning_rate_critic))
 
@@ -114,12 +114,14 @@ class Trainer:
                 avg_reward = np.mean(np.array(reward_window))
                 print("\rEpisode: {}\tAverage total reward: {:.2f}".format(episode_i, avg_reward))
 
-                if avg_reward >= 30.0:
+                if avg_reward >= 1.0:
                     print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(episode_i - 100,
                                                                                                  avg_reward))
                     if not os.path.exists(self.model_path):
                         os.makedirs(self.model_path)
-                    torch.save(self.agents.get_actor().state_dict(), self.model_path + 'checkpoint_actor_{}.pth'.format(
+                    torch.save(self.agents.get_actor()[0].state_dict(), self.model_path + 'checkpoint_actor1_{}.pth'.format(
+                        datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')))
+                    torch.save(self.agents.get_actor()[1].state_dict(), self.model_path + 'checkpoint_actor2_{}.pth'.format(
                         datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')))
                     torch.save(self.agents.get_critic().state_dict(), self.model_path + 'checkpoint_critic_{}.pth'.format(
                         datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')))

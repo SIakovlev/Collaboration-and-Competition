@@ -62,7 +62,7 @@ class Agents:
 
     # Get methods
     def get_actor(self):
-        return self.__actor_local
+        return self.__actors_local
 
     def get_critic(self):
         return self.__critic_local
