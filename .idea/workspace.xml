@@ -2,12 +2,288 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f9352b6-6b97-4866-b99e-3babecf5e748" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/agents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unity-environment.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/unity-environment.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uo_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/uo_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis.x86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis.x86_64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/Assembly-CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/Google.Protobuf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/Grpc.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/Mono.Posix.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/Mono.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/System.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/System.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/System.Interactive.Async.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/System.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/System.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AIModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ARModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ARModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AccessibilityModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AccessibilityModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AnimationModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AnimationModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AssetBundleModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AssetBundleModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.AudioModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ClothModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ClothModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ClusterInputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ClusterInputModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ClusterRendererModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ClusterRendererModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.CoreModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.CoreModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.CrashReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.CrashReportingModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.DirectorModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.DirectorModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.GameCenterModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.GameCenterModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.GridModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.GridModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.IMGUIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.IMGUIModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ImageConversionModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ImageConversionModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.InputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.InputModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.JSONSerializeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.JSONSerializeModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.Networking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ParticleSystemModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ParticleSystemModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ParticlesLegacyModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ParticlesLegacyModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.PerformanceReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.PerformanceReportingModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.Physics2DModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.Physics2DModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.PhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.PhysicsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ScreenCaptureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.ScreenCaptureModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SharedInternalsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SharedInternalsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SpatialTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SpriteMaskModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SpriteMaskModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SpriteShapeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.SpriteShapeModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.StandardEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.StyleSheetsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.StyleSheetsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TerrainModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TerrainModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TerrainPhysicsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TextRenderingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TextRenderingModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TilemapModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.TilemapModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.Timeline.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UIElementsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UIElementsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UIModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UNETModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UNETModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityAnalyticsModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityConnectModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityConnectModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.VRModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.VRModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.VehiclesModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.VehiclesModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.VideoModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.VideoModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.WebModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.WebModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.WindModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.WindModule.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/UnityEngine.dll.mdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Managed/mscorlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/2.0/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/2.0/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/2.0/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.0/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.0/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.0/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.5/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.5/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/4.5/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/browscap.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/etc/mono/mconfig/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/x86/libMonoPosixHelper.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/x86/libmonobdwgc-2.0.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/x86_64/libMonoPosixHelper.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/MonoBleedingEdge/x86_64/libmonobdwgc-2.0.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Plugins/x86/ScreenSelector.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Plugins/x86/libgrpc_csharp_ext.x86.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Plugins/x86_64/ScreenSelector.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Plugins/x86_64/libgrpc_csharp_ext.x64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Resources/UnityPlayer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Resources/unity default resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/Resources/unity_builtin_extra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/boot.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/globalgamemanagers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/globalgamemanagers.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/level0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/resources.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis_Linux/Tennis_Data/sharedassets0.assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-14_22-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-39.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-42.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-43.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-46.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-47.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-49.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-51.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-53.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-58.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_21-59.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_22-02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_22-03.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_22-07.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_22-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_22-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-20_22-16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-32.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-33.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-39.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-41.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_00-44.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_01-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_01-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-21_01-14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-36.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-38.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-40.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-41.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-48.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-53.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-54.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-22_23-59.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-03.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-33.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-39.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-46.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-49.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-51.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-55.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-58.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_00-59.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-13.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-32.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-23_01-34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-24_23-49.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-24_23-52.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-24_23-53.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-24_23-58.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_00-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_00-35.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_00-37.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_00-54.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_01-00.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_01-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_01-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-25_01-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_21-42.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_21-43.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_22-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_22-15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_22-16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_22-19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-32.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-37.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-41.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-43.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-44.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-45.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-52.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-55.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-11-30_23-56.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-03.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_00-31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/run_2018-12-01_01-15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/average_rewards_new_2018-12-01_00-31.dat" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +296,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
+            <state relative-caret-position="390">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -32,7 +308,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/replay_buffer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
+            <state relative-caret-position="30">
               <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -44,7 +320,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
+            <state relative-caret-position="435">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -54,18 +330,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/torch/nn/modules/module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="476" selection-start-line="476" selection-end-line="476" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unity_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1798">
+            <state relative-caret-position="930">
               <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -77,7 +344,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
+            <state relative-caret-position="1050">
               <caret line="82" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -89,17 +356,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            <state relative-caret-position="135">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/agents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1015">
-              <caret line="107" column="34" lean-forward="true" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+            <state relative-caret-position="541">
+              <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -107,11 +374,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/uo_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="135">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -133,13 +409,12 @@
         <option value="$PROJECT_DIR$/src/models.py" />
         <option value="$PROJECT_DIR$/src/uo_process.py" />
         <option value="$PROJECT_DIR$/src/agents.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
@@ -147,7 +422,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,16 +432,22 @@
             <path>
               <item name="Collaboration-and-Competition" type="b2602c69:ProjectViewProjectNode" />
               <item name="Collaboration-and-Competition" type="462c0819:PsiDirectoryNode" />
+              <item name="results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Collaboration-and-Competition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Collaboration-and-Competition" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -219,9 +499,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="43" width="3706" height="2117" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986346" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -290,50 +571,12 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/unityagents/rpc_communicator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="1673" selection-start-line="1673" selection-end-line="1673" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/replay_buffer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unity_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1798">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/unityagents/rpc_communicator.py" />
+    <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/torch/nn/functional.py" />
+    <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/torch/nn/modules/module.py" />
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="390">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -341,16 +584,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/drlnd/lib/python3.6/site-packages/torch/nn/modules/module.py">
+    <entry file="file://$PROJECT_DIR$/src/replay_buffer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="476" selection-start-line="476" selection-end-line="476" />
+        <state relative-caret-position="30">
+          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="435">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -358,9 +604,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/unity_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="1050">
           <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -368,20 +624,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/uo_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/agents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
-          <caret line="107" column="34" lean-forward="true" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+        <state relative-caret-position="541">
+          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>

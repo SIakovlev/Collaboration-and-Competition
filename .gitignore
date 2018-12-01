@@ -1,0 +1,21 @@
+# ignore log files
+# **/logs
+# *.log
+
+# ignore numerical data files
+**/data
+*.dat
+
+# ignore app file
+**/Tennis_app
+**/Tennis_Linux
+
+# ignore python cache files
+**/__pycache__
+**/.ipynb_checkpoints
+
+# ignore .idea
+**/.idea
+
+# ignore other platform specific file types
+*.DS_Store
