@@ -33,10 +33,12 @@ class Trainer:
 
         agent_params = params['agent_params']
 
-        num_of_agents = self.env.observation_space.shape[0]
+        self.__num_of_agents = self.env.observation_space.shape[0]
         state_size = self.env.observation_space.shape[1]
-        agent_params['state_size'] = num_of_agents * state_size
-        agent_params['action_size'] = self.env.action_space_size * num_of_agents
+        action_size = self.env.action_space_size
+        agent_params['num_of_agents'] = self.__num_of_agents
+        agent_params['state_size'] = state_size
+        agent_params['action_size'] = action_size
         self.agents = Agents(params=agent_params)
 
         trainer_params = params['trainer_params']

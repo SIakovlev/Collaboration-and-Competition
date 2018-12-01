@@ -1,0 +1,18 @@
+INFO:unityagents:
+'Academy' started successfully!
+Unity Academy name: Academy
+        Number of Brains: 1
+        Number of External Brains : 1
+        Lesson number : 0
+        Reset Parameters :
+		
+Unity brain name: TennisBrain
+        Number of Visual Observations (per agent): 0
+        Vector Observation space type: continuous
+        Vector Observation space size (per agent): 8
+        Number of stacked Vector Observation: 3
+        Vector Action space type: continuous
+        Vector Action space size (per agent): 2
+        Vector Action descriptions: , 
+INFO:root:Configuration: {'general_params': {'seed': 0, 'num_of_episodes': 2000, 'mode': {'train': 1, 'test': 0}}, 'agent_params': {'state_size': 24, 'action_size': 2, 'num_of_agents': 2, 'learning_rate_actor': 0.001, 'learning_rate_critic': 0.001, 'gamma': 0.99, 'tau': 0.001, 'buf_params': {'buffer_size': 1000, 'batch_size': 128}, 'nn_params': {'nn_actor': {'l1': [24, 128], 'l2': [128, 64], 'l3': [64, 2]}, 'nn_critic': {'l1': [52, 128], 'l2': [128, 256], 'l3': [256, 128], 'l4': [128, 32], 'l5': [32, 1]}}}, 'trainer_params': {'learning_rate_decay': 0.999, 't_max': 1000, 'results_path': '../results/', 'model_path': '../models/'}, 'env_params': {'path': '../Tennis_Linux/Tennis.x86_64', 'seed': 0, 'worker_id': 0, 'visual_mode': False, 'multiagent_mode': True}}
+INFO:root:Training:

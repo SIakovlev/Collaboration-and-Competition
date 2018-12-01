@@ -2,13 +2,16 @@ import numpy as np
 
 
 class UOProcess:
-    def __init__(self, x0=1.0, mu=0.0, sigma=0.2, theta=1.0):
+    def __init__(self, x0=1.0, mu=0.0, sigma=0.2, theta=1.0, shape=None):
         self.theta = theta
         self.x0 = x0
         self.mu = mu
         self.sigma = sigma
         self.x = 0
-        self.W = np.zeros((2, 2))
+        if shape:
+            self.W = np.zeros(shape)
+        else:
+            self.W = 0
         self.t = 0
 
     def sample(self, dt=1e-2):

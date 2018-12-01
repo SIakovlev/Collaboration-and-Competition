@@ -23,12 +23,12 @@ class Actor(nn.Module):
 
     def forward(self, states):
 
-        state = states.view(-1, self.input_size)
-        action = self.relu(self.fc1(state))
+        states = states.view(-1, self.input_size)
+        action = self.relu(self.fc1(states))
         action = self.relu(self.fc2(action))
         action = self.tanh(self.fc3(action))
 
-        return action.view(-1, 2)
+        return action
 
 
 class Critic(nn.Module):

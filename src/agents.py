@@ -11,7 +11,6 @@ from replay_buffer import ReplayBuffer
 from uo_process import UOProcess
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-# device = torch.device("cpu")
 
 
 class Agents:
@@ -20,19 +19,21 @@ class Agents:
         action_size = params['action_size']
         state_size = params['state_size']
         buf_params = params['buf_params']
+        num_agents = params['num_of_agents']
 
         nn_params = params['nn_params']
         nn_params['nn_actor']['l1'][0] = state_size
         nn_params['nn_actor']['l3'][1] = action_size
-        nn_params['nn_critic']['l1'][0] = state_size + action_size
+        nn_params['nn_critic']['l1'][0] = (state_size + action_size) *  num_agents
 
-        self.__actor_local = Actor(nn_params['nn_actor']).to(device)
-        self.__actor_target = Actor(nn_params['nn_actor']).to(device)
+        self.__actors_local = [Actor(nn_params['nn_actor']).to(device), Actor(nn_params['nn_actor']).to(device)]
+        self.__actors_target = [Actor(nn_params['nn_actor']).to(device), Actor(nn_params['nn_actor']).to(device)]
         self.__critic_local = Critic(nn_params['nn_critic']).to(device)
         self.__critic_target = Critic(nn_params['nn_critic']).to(device)
 
         self.__action_size = action_size
         self.__state_size = state_size
+        self.__num_agents = num_agents
         self.__memory = ReplayBuffer(buf_params)
         self.__t = 0
 
@@ -41,9 +42,10 @@ class Agents:
         self.learning_rate_critic = params['learning_rate_critic']
         self.tau = params['tau']
 
-        self.__optimiser_actor = optim.Adam(self.__actor_local.parameters(), self.learning_rate_actor)
+        self.__optimisers_actor = [optim.Adam(self.__actors_local[0].parameters(), self.learning_rate_actor),
+                                   optim.Adam(self.__actors_local[1].parameters(), self.learning_rate_actor)]
         self.__optimiser_critic = optim.Adam(self.__critic_local.parameters(), self.learning_rate_critic)
-        self.__uo_process = UOProcess()
+        self.__uo_process = UOProcess(shape=(self.__num_agents, self.__action_size))
         # other parameters
         self.agent_loss = 0.0
 
@@ -51,8 +53,9 @@ class Agents:
     def set_learning_rate(self, lr_actor, lr_critic):
         self.learning_rate_actor = lr_actor
         self.learning_rate_critic = lr_critic
-        for param_group in self.__optimiser_actor.param_groups:
-            param_group['lr'] = lr_actor
+        for n in range(self.__num_agents):
+            for param_group in self.__optimisers_actor[n].param_groups:
+                param_group['lr'] = lr_actor
         for param_group in self.__optimiser_critic.param_groups:
             param_group['lr'] = lr_critic
 
@@ -72,25 +75,22 @@ class Agents:
             experiences = self.__memory.sample()
             self.__update(experiences)
 
-    def choose_action(self, state, mode='train'):
+    def choose_action(self, states, mode='train'):
         if mode == 'train':
             # state should be transformed to a tensor
-            state = torch.from_numpy(np.array(state)).float().unsqueeze(0).to(device)
-            state = state.view(1, -1)
-            self.__actor_local.eval()
-            with torch.no_grad():
-                action = self.__actor_local(state)
-            self.__actor_local.train()
-            actions = action.cpu().numpy().reshape((-1, 2)) + np.array(self.__uo_process.sample())
+            states = torch.from_numpy(np.array(states)).float().to(device)
+            actions = np.zeros((self.__num_agents, self.__action_size))
+            for i, actor in enumerate(self.__actors_local):
+                state = states[i, :]
+                actor.eval()
+                with torch.no_grad():
+                    action = actor(state)
+                actor.train()
+                actions[i, :] = action.cpu().numpy()
+            actions += np.array(self.__uo_process.sample())
             return np.clip(actions, -1, 1)
         elif mode == 'test':
-            # state should be transformed to a tensor
-            state = torch.from_numpy(np.array(state)).float().unsqueeze(0).to(device)
-            self.__actor_local.eval()
-            with torch.no_grad():
-                action = self.__actor_local(state)
-            self.__actor_local.train()
-            return list(np.clip(action.cpu().numpy().squeeze(), -1, 1))
+            pass
         else:
             print("Invalid mode value")
 
@@ -101,33 +101,31 @@ class Agents:
 
         states, actions, rewards, next_states, dones = experiences
 
-        rewards = rewards.view(-1, 2)
-        dones = dones.view(-1, 2)
-        for i in range(2):
-            # update critic
-            # ----------------------------------------------------------
+        # update critic
+        # ----------------------------------------------------------
+        #
+        for i in range(self.__num_agents):
             loss_fn = nn.MSELoss()
             self.__optimiser_critic.zero_grad()
             # form target
-            next_actions = self.__actor_target(next_states)
             Q_target_next = self.__critic_target.forward(torch.cat((next_states, next_actions), dim=1)).detach()
             targets = (rewards[:, i] + self.gamma * Q_target_next.squeeze() * (1 - dones[:, i])).view(-1, 1)
             # form output
-            outputs = self.__critic_local.forward(torch.cat((states, actions), dim=1))
+            outputs = self.__critic_local.forward(torch.cat((state, action), dim=1))
             mean_loss_critic = loss_fn(outputs, targets)  # minus added since it's gradient ascent
             mean_loss_critic.backward()
             self.__optimiser_critic.step()
 
-        # update actor
-        # ----------------------------------------------------------
-        self.__optimiser_actor.zero_grad()
-        predicted_actions = self.__actor_local(states)
-        mean_loss_actor = - self.__critic_local.forward(torch.cat((states, predicted_actions), dim=1)).mean()
-        mean_loss_actor.backward()
-        self.__optimiser_actor.step()   # update actor
+            # update actor
+            # ----------------------------------------------------------
+            self.__optimiser_actor.zero_grad()
+            predicted_actions = self.__actor_local(states)
+            mean_loss_actor = - self.__critic_local.forward(torch.cat((states, predicted_actions), dim=1)).mean()
+            mean_loss_actor.backward()
+            self.__optimiser_actor.step()   # update actor
 
-        self.__soft_update(self.__critic_local, self.__critic_target, self.tau)
-        self.__soft_update(self.__actor_local, self.__actor_target, self.tau)
+            self.__soft_update(self.__critic_local, self.__critic_target, self.tau)
+            self.__soft_update(self.__actor_local, self.__actor_target, self.tau)
 
     @staticmethod
     def __soft_update(local_model, target_model, tau):
