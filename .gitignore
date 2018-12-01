@@ -1,6 +1,6 @@
 # ignore log files
-# **/logs
-# *.log
+**/logs
+*.log
 
 # ignore numerical data files
 **/data
@@ -16,6 +16,10 @@
 
 # ignore .idea
 **/.idea
+
+# ignore python compilation files
+*.pyc
+*.cpython-36
 
 # ignore other platform specific file types
 *.DS_Store

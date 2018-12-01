@@ -23,7 +23,7 @@ class Actor(nn.Module):
 
     def forward(self, states):
 
-        states = states.view(-1, self.input_size)
+        #states = states.view(-1, self.input_size)
         action = self.relu(self.fc1(states))
         action = self.relu(self.fc2(action))
         action = self.tanh(self.fc3(action))
@@ -46,18 +46,18 @@ class Critic(nn.Module):
         nn.init.xavier_uniform_(self.fc2.weight)
         self.fc3 = nn.Linear(params['l3'][0], params['l3'][1])
         nn.init.xavier_uniform_(self.fc3.weight)
-        self.fc4 = nn.Linear(params['l4'][0], params['l4'][1])
-        nn.init.xavier_uniform_(self.fc4.weight)
-        self.Q = nn.Linear(params['l5'][0], 1)
+        # self.fc4 = nn.Linear(params['l4'][0], params['l4'][1])
+        # nn.init.xavier_uniform_(self.fc4.weight)
+        self.Q = nn.Linear(params['l4'][0], 2)
         nn.init.xavier_uniform_(self.Q.weight)
 
     def forward(self, state_action):
 
-        state_action = state_action.view(-1, self.input_size)
+        #state_action = state_action.view(-1, self.input_size)
         q_value = F.relu(self.fc1(state_action))
         q_value = F.relu(self.fc2(q_value))
         q_value = F.relu(self.fc3(q_value))
-        q_value = F.relu(self.fc4(q_value))
+        # q_value = F.relu(self.fc4(q_value))
         q_value = self.Q(q_value)
 
         return q_value

@@ -1,5 +1,6 @@
 import numpy as np
 import random
+import copy
 import torch
 import torch.optim as optim
 import torch.nn as nn
@@ -72,8 +73,7 @@ class Agents:
         self.__memory.add(state, action, reward, next_state, done)
 
         if self.__memory.is_ready():
-            experiences = self.__memory.sample()
-            self.__update(experiences)
+            self.__update()
 
     def choose_action(self, states, mode='train'):
         if mode == 'train':
@@ -97,35 +97,52 @@ class Agents:
     def reset(self, sigma):
         self.__uo_process.reset(sigma)
 
-    def __update(self, experiences):
+    def __update(self):
 
-        states, actions, rewards, next_states, dones = experiences
-
-        # update critic
-        # ----------------------------------------------------------
-        #
         for i in range(self.__num_agents):
+
+            # update critic
+            # ----------------------------------------------------------
+            #
+            states, actions, rewards, next_states, dones = self.__memory.sample()
+
+            states_i = states[:, i, :]
+            actions_i = actions[:, i, :]
+            rewards_i = rewards[:, i]
+            next_states_i = next_states[:, i, :]
+            dones_i = dones[:, i]
+
             loss_fn = nn.MSELoss()
             self.__optimiser_critic.zero_grad()
+
             # form target
-            Q_target_next = self.__critic_target.forward(torch.cat((next_states, next_actions), dim=1)).detach()
-            targets = (rewards[:, i] + self.gamma * Q_target_next.squeeze() * (1 - dones[:, i])).view(-1, 1)
+            next_states_actions = torch.cat((next_states[:, 0, :], next_states[:, 1, :],
+                                             self.__actors_target[0].forward(next_states[:, 0, :]),
+                                             self.__actors_target[1].forward(next_states[:, 1, :])), dim=1)
+            Q_target_next = self.__critic_target.forward(next_states_actions).detach()
+            targets = (rewards_i + self.gamma * Q_target_next[:, i] * (1 - dones_i))
+
             # form output
-            outputs = self.__critic_local.forward(torch.cat((state, action), dim=1))
-            mean_loss_critic = loss_fn(outputs, targets)  # minus added since it's gradient ascent
+            states_actions = torch.cat((states[:, 0, :], states[:, 1, :],
+                                        actions[:, 0, :], actions[:, 1, :]), dim=1)
+            outputs = self.__critic_local.forward(states_actions)
+            mean_loss_critic = loss_fn(outputs[:, i], targets)  # minus added since it's gradient ascent
             mean_loss_critic.backward()
             self.__optimiser_critic.step()
 
             # update actor
             # ----------------------------------------------------------
-            self.__optimiser_actor.zero_grad()
-            predicted_actions = self.__actor_local(states)
-            mean_loss_actor = - self.__critic_local.forward(torch.cat((states, predicted_actions), dim=1)).mean()
+            self.__optimisers_actor[i].zero_grad()
+            predicted_actions = copy.copy(actions)
+            predicted_actions[:, i, :] = self.__actors_local[i](states_i)
+            mean_loss_actor = - self.__critic_local.forward(torch.cat((states[:, 0, :], states[:, 1, :],
+                                                                       predicted_actions[:, 0, :],
+                                                                       predicted_actions[:, 1, :]), dim=1))[:, i].mean()
             mean_loss_actor.backward()
-            self.__optimiser_actor.step()   # update actor
+            self.__optimisers_actor[i].step()   # update actor
 
             self.__soft_update(self.__critic_local, self.__critic_target, self.tau)
-            self.__soft_update(self.__actor_local, self.__actor_target, self.tau)
+            self.__soft_update(self.__actors_local[i], self.__actors_target[i], self.tau)
 
     @staticmethod
     def __soft_update(local_model, target_model, tau):

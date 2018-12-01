@@ -73,7 +73,7 @@ class Trainer:
             scores = np.zeros(self.env.observation_space.shape[0])
             total_loss = 0
 
-            self.sigma *= 0.995
+            self.sigma *= 0.95
 
             counter = 0
             for t in range(self.t_max):
@@ -95,12 +95,12 @@ class Trainer:
 
             reward_window.append(np.max(scores))
             self.avg_rewards.append(np.mean(np.array(reward_window)))
-            print('\rEpisode {}\tCurrent Score: {:.2f}\tAverage Score: {:.2f} '
+            print('\rEpisode {}\tCurrent Score: {:.4f}\tAverage Score: {:.4f} '
                   '\t\tTotal loss: {:.2f}\tLearning rate (actor): {:.4f}\tLearning rate (critic): {:.4f}'.
                   format(episode_i, np.max(scores), np.mean(reward_window),
                          total_loss, self.agents.learning_rate_actor, self.agents.learning_rate_critic), end="")
 
-            logging.info('Episode {}\tCurrent Score (average over 20 robots): {:.2f}\tAverage Score (over episodes): {:.2f} '
+            logging.info('Episode {}\tCurrent Score (average over 20 robots): {:.4f}\tAverage Score (over episodes): {:.4f} '
                          '\t\tTotal loss: {:.2f}\tLearning rate (actor): {:.4f}\tLearning rate (critic): {:.4f}'.
                          format(episode_i, np.max(scores), np.mean(reward_window),
                                 total_loss, self.agents.learning_rate_actor, self.agents.learning_rate_critic))
