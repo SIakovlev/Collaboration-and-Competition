@@ -98,6 +98,15 @@ The main idea of MADDPG is to use a single critic, that outputs Q values for eac
 
 MADDPG implementation can be found in `agent.py` under `__update(...)` method.
 
+Main hyperparameters:
+- `learning_rate_actor`: 0.001,
+- `learning_rate_critic`: 0.001, 
+- `gamma`: 0.99,
+- `tau`: 0.01, 
+- `buffer_size`: 100000,
+- `batch_size`: 256,
+- `learning_rate_decay`: 0.999
+
 ### Results
 
 - The following graph shows avegrage reward the 10000 episodes of training. As can be seen, the average reward remains much higher than required +0.5, sometimes reaching values above +1.5. 
