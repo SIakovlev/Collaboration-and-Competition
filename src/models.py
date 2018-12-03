@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -44,20 +45,27 @@ class Critic(nn.Module):
         nn.init.xavier_uniform_(self.fc1.weight)
         self.fc2 = nn.Linear(params['l2'][0], params['l2'][1])
         nn.init.xavier_uniform_(self.fc2.weight)
-        self.fc3 = nn.Linear(params['l3'][0], params['l3'][1])
-        nn.init.xavier_uniform_(self.fc3.weight)
-        # self.fc4 = nn.Linear(params['l4'][0], params['l4'][1])
-        # nn.init.xavier_uniform_(self.fc4.weight)
-        self.Q = nn.Linear(params['l4'][0], 2)
-        nn.init.xavier_uniform_(self.Q.weight)
+
+        self.fc3_1 = nn.Linear(params['l3'][0], params['l3'][1])
+        nn.init.xavier_uniform_(self.fc3_1.weight)
+
+        self.fc3_2 = nn.Linear(params['l3'][0], params['l3'][1])
+        nn.init.xavier_uniform_(self.fc3_2.weight)
+
+        self.Q1 = nn.Linear(params['l4'][0], 1)
+        nn.init.xavier_uniform_(self.Q1.weight)
+        self.Q2 = nn.Linear(params['l4'][0], 1)
+        nn.init.xavier_uniform_(self.Q2.weight)
 
     def forward(self, state_action):
 
-        #state_action = state_action.view(-1, self.input_size)
         q_value = F.relu(self.fc1(state_action))
         q_value = F.relu(self.fc2(q_value))
-        q_value = F.relu(self.fc3(q_value))
-        # q_value = F.relu(self.fc4(q_value))
-        q_value = self.Q(q_value)
 
-        return q_value
+        q_value1 = F.relu(self.fc3_1(q_value))
+        q_value1 = self.Q1(q_value1)
+
+        q_value2 = F.relu(self.fc3_2(q_value))
+        q_value2 = self.Q2(q_value2)
+
+        return torch.cat((q_value1, q_value2), dim=1)

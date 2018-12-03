@@ -73,7 +73,7 @@ class Trainer:
             scores = np.zeros(self.env.observation_space.shape[0])
             total_loss = 0
 
-            self.sigma *= 0.95
+            self.sigma *= 0.99
 
             counter = 0
             for t in range(self.t_max):
@@ -119,21 +119,26 @@ class Trainer:
                                                                                                  avg_reward))
                     if not os.path.exists(self.model_path):
                         os.makedirs(self.model_path)
-                    torch.save(self.agents.get_actor()[0].state_dict(), self.model_path + 'checkpoint_actor1_{}.pth'.format(
-                        datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')))
-                    torch.save(self.agents.get_actor()[1].state_dict(), self.model_path + 'checkpoint_actor2_{}.pth'.format(
-                        datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')))
-                    torch.save(self.agents.get_critic().state_dict(), self.model_path + 'checkpoint_critic_{}.pth'.format(
-                        datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')))
+
+                    t = datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')
+                    torch.save(self.agents.get_actor()[0].state_dict(), self.model_path + 'checkpoint_actor1_{}.pth'.
+                               format(t))
+                    torch.save(self.agents.get_actor()[1].state_dict(), self.model_path + 'checkpoint_actor2_{}.pth'.
+                               format(t))
+                    torch.save(self.agents.get_critic().state_dict(), self.model_path + 'checkpoint_critic_{}.pth'.
+                               format(t))
+                    np.array(self.avg_rewards).dump(self.results_path + 'average_rewards_{}.dat'.format(t))
 
         t = datetime.datetime.today().strftime('%Y-%m-%d_%H-%M')
         # reward_matrix.dump(self.results_path + 'reward_matrix_new_{}.dat'.format(t))
-        np.array(self.avg_rewards).dump(self.results_path + 'average_rewards_new_{}.dat'.format(t))
+        np.array(self.avg_rewards).dump(self.results_path + 'average_rewards_{}.dat'.format(t))
 
-    def test(self, checkpoint_actor_filename, checkpoint_critic_filename, time_span=10):
-        checkpoint_actor_path = self.model_path + checkpoint_actor_filename
+    def test(self, checkpoint_actor1_filename, checkpoint_actor2_filename, checkpoint_critic_filename, time_span=10):
+        checkpoint_actor1_path = self.model_path + checkpoint_actor1_filename
+        checkpoint_actor2_path = self.model_path + checkpoint_actor2_filename
         checkpoint_critic_path = self.model_path + checkpoint_critic_filename
-        self.agents.get_actor().load_state_dict(torch.load(checkpoint_actor_path))
+        self.agents.get_actor()[0].load_state_dict(torch.load(checkpoint_actor1_path))
+        self.agents.get_actor()[1].load_state_dict(torch.load(checkpoint_actor2_path))
         self.agents.get_critic().load_state_dict(torch.load(checkpoint_critic_path))
         for t in range(time_span):
             state = self.env.reset(train_mode=False)
@@ -142,10 +147,8 @@ class Trainer:
 
             while True:
                 action = self.agents.choose_action(state, 'test')
-                sys.stdout.flush()
-                self.env.render()
                 state, reward, done, _ = self.env.step(action)
-                self.score += np.array(reward)
+                self.score += np.array(np.max(reward))
                 if any(done):
                     break
 

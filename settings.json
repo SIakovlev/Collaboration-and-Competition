@@ -2,7 +2,7 @@
 	"general_params" : {
 		"seed" 							: 0,
 	  	"num_of_episodes" 				: 10000,
-	  	"mode"							: {"train" : 1, "test" : 0}
+	  	"mode"							: {"train" : 0, "test" : 1}
 	},
 	"agent_params" : {
 		"state_size"					: -1,

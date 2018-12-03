@@ -90,7 +90,17 @@ class Agents:
             actions += np.array(self.__uo_process.sample())
             return np.clip(actions, -1, 1)
         elif mode == 'test':
-            pass
+            # state should be transformed to a tensor
+            states = torch.from_numpy(np.array(states)).float().to(device)
+            actions = np.zeros((self.__num_agents, self.__action_size))
+            for i, actor in enumerate(self.__actors_local):
+                state = states[i, :]
+                actor.eval()
+                with torch.no_grad():
+                    action = actor(state)
+                actions[i, :] = action.cpu().numpy()
+            actions += np.array(self.__uo_process.sample())
+            return np.clip(actions, -1, 1)
         else:
             print("Invalid mode value")
 
