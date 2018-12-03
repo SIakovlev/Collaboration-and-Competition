@@ -107,4 +107,5 @@ MADDPG implementation can be found in `agent.py` under `__update(...)` method.
 
 ### Possible improvements
 
-One of the possible algortihm improvements is to use PPO algorithms with actors outputting mean and standard deviations of actions the agents take. The details of PPO are described in the previous project on continuous control: https://github.com/SIakovlev/Continuous-Control#ppo 
+- One of the possible algortihm improvements is to use PPO algorithms with actors outputting mean and standard deviations of actions the agents take. The details of PPO are described in the previous project on continuous control: https://github.com/SIakovlev/Continuous-Control#ppo 
+- Fully decentralised approach based on: [paper_link](https://arxiv.org/abs/1802.08757)
