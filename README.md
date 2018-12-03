@@ -2,7 +2,7 @@
 
 Deep Reinforcement Learning Nanodegree Project 3 (Multiagent RL)
 
-![Tennis]()
+![Tennis](results/tennis.gif)
 
 ### Project description
 
