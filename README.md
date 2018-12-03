@@ -91,3 +91,13 @@ Neural network architecture for critic:
 The following diagram illustrates the idea of MADDPG: [MADDPG](results/MADDPG_pic.png)
 
 MADDPG implementation can be found in `agent.py` under `__update(...)` method.
+
+### Results
+
+- The following graph shows avegrage reward the 10000 episodes of training. As can be seen, the average reward remains much higher than required +0.5, sometimes reaching values above +1.5. 
+![reward_graph](results/reward.png)
+- Log files of the training procedure can be found in `logs/` folder.
+- Actor and critic checkpoints are saved in `results/` folder.
+
+### Possible improvements
+
