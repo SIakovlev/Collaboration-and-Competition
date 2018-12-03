@@ -1,6 +1,6 @@
 # ignore log files
-**/logs
-*.log
+#**/logs
+#*.log
 
 # ignore numerical data files
 **/data
