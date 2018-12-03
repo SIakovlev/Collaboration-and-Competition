@@ -2,7 +2,9 @@
 
 Deep Reinforcement Learning Nanodegree Project 3 (Multiagent RL)
 
-![Tennis](results/tennis.gif)
+<p align="center">
+<img src="results/tennis.gif"/>
+</p>
 
 ### Project description
 
@@ -90,7 +92,9 @@ Neural network architecture for critic:
 
 The main idea of MADDPG is to use a single critic, that outputs Q values for each agent during training, while actors can be local and trained separately. The following diagram illustrates this:
 
+<p align="center">
 <img src="results/MADDPG_pic.png" width="350">
+</p>
 
 MADDPG implementation can be found in `agent.py` under `__update(...)` method.
 
