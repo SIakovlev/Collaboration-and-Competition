@@ -57,10 +57,37 @@ All project settings are stored in JSON file: `settings.json`. It is divided int
 
 #### MADDPG
 
-Paper:[Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)
+Paper: [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)
 
 MADDPG is summarised below: 
 
 [MADDPG](results/MADDPG_alg.png)
 
-Diagram: [MADDPG](results/MADDPG_pic.png)
+**Idea (Summary)**. 
+
+- Critic. Use single neural network with two "heads" for Q-value function approximation as `state1, state2, action1, action2` -> `q_value1, q_value2`, where `state1, state2, action1, action2` are the states and actions of agents 1 and 2 correspondingly.
+- Actor. Use two neural networks for determenistic policy approximation as `state_i` -> `argmax_Q_i` mapping for each agent separately.
+- Add a sample of the Ornstein–Uhlenbeck process ([link](https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)) for exploration.
+
+Neural network architecture for actor (both actors use the same architecture):
+
+| Layer   | (in, out)          | Activation|
+|---------|--------------------|-----------|
+| Layer 1 | (`state_size`, 128) | `relu`|
+| Layer 2 | (128, 64) | `relu` |
+| Layer 3 | (64, `action_size`)| `tanh` |
+
+Neural network architecture for critic:
+
+| Layer   | (in, out)          | Activation|
+|---------|--------------------|-----------|
+| Layer 1 | (`(state_size + action_size) * num_agents`, 256) | `relu`|
+| Layer 2 | (256, 128) | `relu` |
+| Layer 3_1 | (128, 64)| `relu` |
+| Layer 4_1 | (64, 1) | - |
+| Layer 3_2 | (128, 64)| `relu` |
+| Layer 4_2 | (64, 1) | - |
+
+The following diagram illustrates the idea of MADDPG: [MADDPG](results/MADDPG_pic.png)
+
+MADDPG implementation can be found in `agent.py` under `__update(...)` method.
