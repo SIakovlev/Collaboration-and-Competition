@@ -88,8 +88,9 @@ Neural network architecture for critic:
 | Layer 3_2 | (128, 64)| `relu` |
 | Layer 4_2 | (64, 1) | - |
 
-The following diagram illustrates the idea of MADDPG: 
-![MADDPG](results/MADDPG_pic.png)
+The main idea of MADDPG is to use a single critic, that outputs Q values for each agent during training, while actors can be local and trained separately. The following diagram illustrates this:
+
+<img src="results/MADDPG_pic.png" width="350">
 
 MADDPG implementation can be found in `agent.py` under `__update(...)` method.
 
@@ -102,3 +103,4 @@ MADDPG implementation can be found in `agent.py` under `__update(...)` method.
 
 ### Possible improvements
 
+One of the possible algortihm improvements is to use PPO algorithms with actors outputting mean and standard deviations of actions the agents take. The details of PPO are described in the previous project on continuous control: https://github.com/SIakovlev/Continuous-Control#ppo 
