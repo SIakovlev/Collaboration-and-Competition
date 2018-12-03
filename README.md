@@ -61,7 +61,7 @@ Paper: [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments]
 
 MADDPG is summarised below: 
 
-[MADDPG](results/MADDPG_alg.png)
+![MADDPG](results/MADDPG_alg.png)
 
 **Idea (Summary)**. 
 
@@ -88,7 +88,8 @@ Neural network architecture for critic:
 | Layer 3_2 | (128, 64)| `relu` |
 | Layer 4_2 | (64, 1) | - |
 
-The following diagram illustrates the idea of MADDPG: [MADDPG](results/MADDPG_pic.png)
+The following diagram illustrates the idea of MADDPG: 
+![MADDPG](results/MADDPG_pic.png)
 
 MADDPG implementation can be found in `agent.py` under `__update(...)` method.
 
